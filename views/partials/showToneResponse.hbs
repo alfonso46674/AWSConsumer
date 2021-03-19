@@ -1,4 +1,29 @@
-{{#each toneArray as |tones|}}
-    <p>{{tones.tone_name}}</p>
-    <p>{{tones.score}}</p>
- {{/each}}   
+<style type="text/css">
+td,th
+{
+    padding:0 15px;
+}
+
+
+</style>
+
+ <table>
+
+    <thead>
+        <tr align="center">
+            <th>{{label3}}</th>
+            <th>{{label4}}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each toneArray as |tones|}}
+        <tr align="center">
+            <td>{{tones.tone_name}}</td>
+            <td>{{tones.score}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    
+</table>
+

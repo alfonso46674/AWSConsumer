@@ -14,7 +14,12 @@ router.post('/',async (req,res)=>{
     res.render('home',{
         title: 'AWS Consumer',
         condition: false,
-        toneArray: response.tonesArray
+        toneArray: response.tonesArray,
+        previousText: inputObject.textarea,
+        label1: "Text previously entered:",
+        label2: "The previous text was shown to have the following tones:",
+        label3: "Tone",
+        label4: "Score %"
     })
 })
 
