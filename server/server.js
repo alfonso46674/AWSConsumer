@@ -16,6 +16,7 @@ const { json, urlencoded } = express
 //configuracion basica de parseo
 app.use(json())
 app.use(urlencoded({ extended: false }))
+app.use(express.text())
 
 //setear el handlebars como engine por defecto
 app.engine('hbs',hbs({
