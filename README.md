@@ -13,3 +13,10 @@ npm run start
 
 This project uses an IBM Cloud Foundry service to do the tone analyzer requests. Said cloud foundry service was deployed with the following repository: https://github.com/alfonso46674/ToneAnalyzer_IBMCloud
 
+## Endpoints
+
+
+
+| Method | Endpoint    | Description |
+|--------|-------------|-------------|
+| GET    | /autor    |   Returns a JSON with the name of the autor         |
