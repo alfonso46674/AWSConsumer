@@ -11,7 +11,11 @@ router.post('/',async (req,res)=>{
     let response = await tone_request(toneAnalyzerURL, inputObject.textarea,
         {'Content-Type':'text/plain'}) 
 
-    res.send("done")
+    res.render('home',{
+        title: 'AWS Consumer',
+        condition: false,
+        toneArray: response.tonesArray
+    })
 })
 
 //asynchronous function to handle the post request
@@ -22,7 +26,7 @@ async function tone_request(url,body,headers){
         headers: headers
     })
     return await data.json()
-    // return response
+    
 }
 
 module.exports = router
